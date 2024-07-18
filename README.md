@@ -5,3 +5,4 @@ Repositório com as atividades da disciplina de desenvilvimento web do período 
 ## Atividades
 
 - [atividade 01](./atividade1/)
+- [atividade 02](./atividade2/)
