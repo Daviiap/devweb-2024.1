@@ -122,6 +122,12 @@ body {
     color: #f44242;
 }
 
+.rodape__lista-links__item a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
 .rodape__coluna {
     margin-top: 40px;
     margin-bottom: 40px;
@@ -156,13 +162,13 @@ img {
     height: auto;
 }
 
-.apgina-conteudo {
+.pagina-conteudo {
     padding: 15px;
     padding-top: 20px;
     padding-bottom: 25px;
 }
 
-.apgina-conteudo p {
+.pagina-conteudo p {
     color: #3a3a3a;
     line-height: 22px;
     margin-top: 20px;

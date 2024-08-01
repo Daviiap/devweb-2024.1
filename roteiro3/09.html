@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    function handleclick() {
+        const statistics = {
+            mean: 0,
+            negativeCount: 0,
+            positiveCount: 0,
+            positivePercent: 0,
+            negativePercent: 0,
+        }
+
+        const input = document.getElementById("input")
+        const inputValue = input.value
+        input.value = ""
+
+        const values = inputValue.split(",")
+
+        values.forEach(val => {
+            intVal = parseInt(val)
+            statistics.mean += intVal / values.length
+            if (val > 0) {
+                statistics.positiveCount++
+            } else if (val < 0) {
+                statistics.negativeCount++
+            }
+        });
+        statistics.positivePercent = ((statistics.positiveCount / values.length) * 100).toFixed(2) + " %"
+        statistics.negativePercent = ((statistics.negativeCount / values.length) * 100).toFixed(2) + " %"
+
+        const resultP = document.getElementById("result")
+
+        resultP.innerHTML = JSON.stringify(statistics)
+    }
+</script>
+
+<body>
+    <main>
+        <h1>09</h1>
+        <div>
+            <div>
+                <input type="text" id="input">
+                <button type="button" onclick="handleclick()">CALCULAR</button>
+            </div>
+            <div>
+                <h4>Result:</h4>
+                <p id="result"></p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

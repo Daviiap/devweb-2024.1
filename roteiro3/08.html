@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    function handleclick() {
+        const input = document.getElementById("input")
+        const inputValue = input.value
+        input.value = ""
+
+        const values = inputValue.split(",")
+
+        const resultP = document.getElementById("result")
+
+        resultP.innerHTML = values.map(v => {
+            return fatorial(v)
+        })
+    }
+
+    function fatorial(n) {
+        if (n == 0 || n == 1) return 1
+        else return n * fatorial(n - 1)
+    }
+</script>
+
+<body>
+    <main>
+        <h1>08</h1>
+        <div>
+            <div>
+                <input type="text" id="input">
+                <button type="button" onclick="handleclick()">CALCULAR</button>
+            </div>
+            <div>
+                <h4>Result:</h4>
+                <p id="result"></p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

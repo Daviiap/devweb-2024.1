@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    function handleclick() {
+        const input = document.getElementById("input")
+        const inputValue = input.value
+        input.value = ""
+
+        const values = inputValue.split(",")
+
+        const resultP = document.getElementById("result")
+
+        resultP.innerHTML = values.reduce((acc, val) => {
+            if (val % 2 == 1 && val % 3 == 0) return acc += parseInt(val)
+            return acc
+        }, 0)
+    }
+</script>
+
+<body>
+    <main>
+        <h1>07</h1>
+        <div>
+            <div>
+                <input type="text" id="input">
+                <button type="button" onclick="handleclick()">CALCULAR</button>
+            </div>
+            <div>
+                <h4>Result:</h4>
+                <p id="result"></p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

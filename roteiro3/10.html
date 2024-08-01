@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    function handleclick() {
+        const statistics = {
+            mean: 0,
+            negativeCount: 0,
+            positiveCount: 0,
+            positivePercent: 0,
+            negativePercent: 0,
+        }
+
+        const input = document.getElementById("input")
+        const inputValue = input.value
+        input.value = ""
+
+        const values = inputValue.split(",")
+
+        const resultP = document.getElementById("result")
+
+        resultP.innerHTML = values.reverse()
+    }
+</script>
+
+<body>
+    <main>
+        <h1>10</h1>
+        <div>
+            <div>
+                <input type="text" id="input">
+                <button type="button" onclick="handleclick()">CALCULAR</button>
+            </div>
+            <div>
+                <h4>Result:</h4>
+                <p id="result"></p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
