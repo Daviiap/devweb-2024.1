@@ -10,3 +10,4 @@ Repositório com as atividades da disciplina de desenvilvimento web do período 
 - [roteiro 03](./roteiro3/)
 - [roteiro 04](./roteiro4/)
 - [roteiro 05](./roteiro5/)
+- [roteiro 06](./roteiro6/)
